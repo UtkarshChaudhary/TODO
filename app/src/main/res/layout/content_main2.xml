@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.utkarsh.todo.MainActivity2"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main2">
+
+    <LinearLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:background="#0ff"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:text="Title"
+        android:textAlignment="center"
+        android:layout_weight="1" />
+    <EditText
+
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:hint="title"
+        android:id="@+id/title"
+        android:layout_weight="3" />
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="20sp"
+            android:text="Description"
+            android:paddingLeft="20dp"
+            android:layout_weight="1"
+            android:background="#0f0"
+
+            />
+        <EditText
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:hint="description"
+            android:id="@+id/notes"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cardView"
+
+                android:focusable="false"
+                android:hint="Date" />
+
+
+        <EditText
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/date"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/date"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:hint="Time" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+       <RadioGroup
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:id="@+id/category"
+           android:layout_weight="1"
+           android:orientation="vertical"
+           >
+
+           <RadioButton
+               android:id="@+id/personal"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:text="Personal"
+               android:onClick="categoryRadioButtonClicked"
+               />
+
+           <RadioButton
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:id="@+id/food"
+               android:text="Food"
+               android:onClick="categoryRadioButtonClicked"/>
+           <RadioButton
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:id="@+id/business"
+               android:text="Business"
+               android:onClick="categoryRadioButtonClicked"/>
+           <RadioButton
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:id="@+id/travel"
+               android:text="Travel"
+               android:onClick="categoryRadioButtonClicked"/>
+       </RadioGroup>
+
+            <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+                android:id="@+id/priority"
+                android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/Low"
+                android:text="Low"
+                android:onClick="priorityRadioButtonClicked"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/medium"
+                android:text="Medium"
+                android:onClick="priorityRadioButtonClicked"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/high"
+                android:text="High"
+                android:onClick="priorityRadioButtonClicked"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+    </LinearLayout>
+
+</LinearLayout>
